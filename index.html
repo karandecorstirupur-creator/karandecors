@@ -1,100 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Karan Decors Professional Painting Service</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karan Decors - Painting Services</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      background: #f8f9fa;
+    }
+
+    /* ✅ Header */
+    header {
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: #fff;
+      padding: 40px 15px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+
+    /* ✅ Navbar */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background: #2c3e50;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      padding: 15px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background: #2ecc71;
+      border-radius: 5px;
+    }
+
+    /* ✅ Sections */
+    .container {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #2c3e50;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      flex: 1 1 calc(33.333% - 20px);
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    /* ✅ Appointment Section */
+    #contact {
+      background: #f1f1f1;
+      text-align: center;
+      padding: 50px 20px;
+      border-radius: 10px;
+    }
+
+    #contact h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .btn-appointment {
+      display: inline-block;
+      background: #2ecc71;
+      color: #fff;
+      padding: 15px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-appointment:hover {
+      background: #27ae60;
+      transform: scale(1.05);
+    }
+
+    /* ✅ Footer */
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      padding: 40px 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      text-align: center;
+    }
+
+    footer h4 {
+      margin-bottom: 15px;
+      color: #2ecc71;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 20px;
+      border-top: 1px solid #444;
+      padding-top: 15px;
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+
+    /* ✅ Mobile Responsive */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        text-align: center;
+      }
+      .card {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <h4>Karan Decors Painting Service</h4>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-3"><a class="nav-link" href="#home" style="font-weight:bold; color:black;">Home</a></li>
-                    <li class="nav-item mx-3"><a class="nav-link" href="#services" style="font-weight:bold; color:black;">Services</a></li>
-                    <li class="nav-item mx-3"><a class="nav-link" href="gallery.html" style="font-weight:bold; color:black;">Gallery</a></li>
-                   <li class="nav-item mx-3"><a class="nav-link" href="#contact" style="font-weight:bold; color:black;">Contact</a></li>
-                </ul>
-            </div>
+  <!-- ✅ Home Section -->
+  <header id="home">
+    <h1>Karan Decors</h1>
+    <p>Professional Painting Services in Tirupur</p>
+  </header>
 
+  <!-- ✅ Navbar -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="#contact">Book Appointment</a>
+  </nav>
 
-        </div>
-    </nav>
+  <!-- ✅ Services Section -->
+  <section id="services" class="container">
+    <h2>Our Painting Services</h2>
+    <div class="row">
+      <div class="card">
+        <img src="static/images/school-wall-painting-service.jpg" alt="School Painting">
+        <h3>School Painting</h3>
+        <p>Bright, safe, and inspiring painting for classrooms, playgrounds, and walls.</p>
+      </div>
+      <div class="card">
+        <img src="static/images/images (3).jpg" alt="Home Painting">
+        <h3>Home Painting</h3>
+        <p>Transform your home with vibrant interior & exterior painting services.</p>
+      </div>
+      <div class="card">
+        <img src="static/images/images (1).jpg" alt="Commercial Painting">
+        <h3>Commercial Painting</h3>
+        <p>Durable and professional painting for offices, shops, and industries.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Header -->
-    <header class="bg-primary text-white text-center py-5">
-        <h1>Professional Painting Services</h1>
-        <p>High-quality painting for your home & office</p>
-        <a href="#contact" class="btn btn-light">Get a Free Quote</a>
-    </header>
+  <!-- ✅ Contact Section -->
+  <section id="contact" class="container">
+    <h2>Book an Appointment</h2>
+    <p>Fill out our online form to book your painting service quickly.</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScaEj-Nmpt_JQv9mi3ck_hCRVgM2z8Fdy2hpRSsajk8sbwkhA/viewform"
+       target="_blank"
+       class="btn-appointment">
+       Fill Appointment Form
+    </a>
+  </section>
 
-    <!-- Services Section -->
-    <section id="services" class="container my-5">
-        <h2 class="text-center mb-4">Our Services</h2>
-        <p class="text-center mb-4">We provide services in Tiruppur, Coimbatore, and Ooty.</p>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="static/images/painting2.jpg" class="card-img-top" alt="Interior Painting">
-                    <div class="card-body">
-                        <h5 class="card-title">Interior Painting</h5>
-                        <p class="card-text">We bring life to your interior walls with vibrant colors.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="static/images/images.jpg" class="card-img-top" alt="Exterior Painting">
-                    <div class="card-body">
-                        <h5 class="card-title">Exterior Painting</h5>
-                        <p class="card-text">Make your home stand out with professional exterior painting.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="static/images/palettes.jpeg" class="card-img-top" alt="Commercial Painting">
-                    <div class="card-body">
-                        <h5 class="card-title">Commercial Painting</h5>
-                        <p class="card-text">Top-quality painting services for offices & businesses.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="bg-light py-5">
-        <div class="container text-center">
-            <h2 class="mb-4">Book an Appointment</h2>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScaEj-Nmpt_JQv9mi3ck_hCRVgM2z8Fdy2hpRSsajk8sbwkhA/viewform" 
-               target="_blank" class="btn btn-primary btn-lg">
-               Fill Appointment Form
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <h4>Karan Decors Professional Painting Services</h4>
-            <p>Coimbatore, Tamil Nadu, India</p>
-            <p>
-                📍 <a href="https://www.google.com/maps/place/Karan+Decors+Professional+Painting+Service/@11.2185702,77.2363792,18.75z/data=!4m6!3m5!1s0x3ba903d847f8e855:0xc2fe3dfccba38770!8m2!3d11.2182452!4d77.2346968!16s%2Fg%2F11y8_jkcfg?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank"  style="color: blue;">
-                View on Google Maps</a>
-            </p>
-            <p>
-                📞 <a href="tel:6374741712" class="text-white text-decoration-none">6374741712</a>
-            </p>
-            <p class="mt-3">&copy; 2024 Karan Decors. All rights reserved.</p>
-        </div>
-    </footer>
+  <!-- ✅ Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h4>About Us</h4>
+        <p>Karan Decors offers professional painting services for schools, homes, and businesses in Tirupur & Coimbatore.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <p><a href="#home">Home</a></p>
+        <p><a href="#services">Services</a></p>
+        <p><a href="gallery.html">Gallery</a></p>
+        <p><a href="#contact">Book Appointment</a></p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>📍 Tirupur, Tamil Nadu</p>
+        <p>📞 <a href="tel:6374741712">6374741712</a></p>
+        <p>🌐 <a href="https://karandecorstirupur-creator.github.io/karandecors/">Website</a></p>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2024 Karan Decors. All rights reserved.
+    </div>
+  </footer>
 </body>
 </html>
